@@ -16,10 +16,11 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  board.include? do |empty_check|
-  empty_check == "X" || empty_check == "O"
-  end
-  WIN_COMBINATIONS.each do |win_combination|
+  if board.all? do |empty_check|
+    empty_check == "X" || empty_check == "O"
+    end
+
+  elsif WIN_COMBINATIONS.each do |win_combination|
     win_index_1 = win_combination[0]
     win_index_2 = win_combination[1]
     win_index_3 = win_combination[2]
