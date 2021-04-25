@@ -44,10 +44,7 @@ def full?(board)
 end
 
 def draw?(board)
-  if full?(board)
-  elsif !won?(board)
-  elsif won?(board) && full?(board)
-  end
+  if won?(board)
 end
 
 def over?(board)
