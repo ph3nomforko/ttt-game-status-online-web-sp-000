@@ -16,6 +16,9 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
+  board.include? do |empty_check|
+  empty_check == "X" || empty_check == "O"
+  end
   WIN_COMBINATIONS.each do |win_combination|
     win_index_1 = win_combination[0]
     win_index_2 = win_combination[1]
