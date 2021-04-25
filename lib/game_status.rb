@@ -56,5 +56,12 @@ def over?(board)
 end
 
 def winner?(board)
-  text
+  winning_player = []
+  winning_player = won?(board)
+  if winning_player == false
+    return nil
+  elsif board[winning_player[0]] == "X"
+    return "X"
+  elsif board[winning_player[0]] == "O"
+    return "O"
 end
